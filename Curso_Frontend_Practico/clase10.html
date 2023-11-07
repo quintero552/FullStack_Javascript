@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Orden</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Serif:opsz,wght@8..144,200&family=Tourney:wght@100&display=swap" rel="stylesheet">
+  
+    <style>
+        :root { /* es un selector css que te permite manejar el nodo principal de un documento :root” es igual a decir “html”, la ventaja es que :root tiene mayor prioridad(especificidad). Es muy utilizado para iniciar las variables css justamente por eso */
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital--green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body { /* dejamos el body a 0 pixeles de margen*/
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            
+        }
+
+        .my-order{ /* Creamos los estilos del contenedor principal */
+            width: 100%; /*100% la pantalla*/
+            height: 100vh;
+            display: grid; /* display para poder para crear una cuadricula de columnas*/
+            place-items: center;
+        }
+
+        .title{ /*le damos estilos al texto*/
+            font-size: var(--lg);
+            margin-bottom: 40px;
+        }
+
+        .my-order-container{ /*Este es el modulo donde se agrupara todo el contenedor */
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* grid-template-rows determina el numero y tamaño de las filas*/
+            width: 300px;
+        }
+
+        .my-order-content{/*Este es el modulo donde se agregaran el total y cuantos artculos seleciono */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .order{ /*le damos los estilos al div de total de ordenes y costo total de productos */
+            display: grid; /* rceamos un disply grid para darle estilo de cuadricula*/
+            grid-template-columns: auto 1fr auto;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            /*padding: 0 24px;*/
+        }
+
+                
+        .order p:nth-child(1){
+            display: flex;
+            flex-direction: column;
+        }
+
+        .order p:nth-child(2){
+            text-align: end;
+            font-weight: bold;
+        }
+
+        .order p span:nth-child(1){
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .order p span:nth-child(2){
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+
+        @media (max-width: 640px) { /* @media, que sea un tamaño de max-width: 640 que quiere decir que menos de esta medida  */
+            .title{
+                height: 100%; 
+                text-align: center;
+            }
+
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="my-order"><!--contenedor principal-->        
+        <div class="my-order-container"><!--contenedor donde esta agrupado el titulo y el total del precio-->          
+            <h1 class="title">My Ordens</h1>
+            
+            <div class="my-order-content"><!--Este es el modulo donde se agregaran el total y cuantos artculos seleciono-->
+                <div class="order">
+                    <p>
+                        <span>04.25.2021</span>
+                        <span>6 articles</span>                    
+                    </p>
+                    <p>$120.00</p> 
+                    <img src="./Icons/flechita.svg" alt="flecha"> 
+                </div>
+                
+            </div> 
+            
+            
+            <div class="my-order-content"><!--Este es el modulo donde se agregaran el total y cuantos artculos seleciono-->
+                <div class="order">
+                    <p>
+                        <span>02.20.2021</span>
+                        <span>6 articles</span>                    
+                    </p>
+                    <p>$120.00</p> 
+                    <img src="./Icons/flechita.svg" alt="flecha"> 
+                </div>
+                
+            </div> 
+
+            
+            <div class="my-order-content"><!--Este es el modulo donde se agregaran el total y cuantos artculos seleciono-->
+                <div class="order">
+                    <p>
+                        <span>02.10.2021</span>
+                        <span>6 articles</span>                    
+                    </p>
+                    <p>$120.00</p> 
+                    <img src="./Icons/flechita.svg" alt="flecha"> 
+                </div>
+                
+            </div> 
+
+            
+            <div class="my-order-content"><!--Este es el modulo donde se agregaran el total y cuantos artculos seleciono-->
+                <div class="order">
+                    <p>
+                        <span>01.09.2021</span>
+                        <span>6 articles</span>                    
+                    </p>
+                    <p>$120.00</p> 
+                    <img src="./Icons/flechita.svg" alt="flecha"> 
+                </div>
+                
+            </div> 
+
+            
+            <div class="my-order-content"><!--Este es el modulo donde se agregaran el total y cuantos artculos seleciono-->
+                <div class="order">
+                    <p>
+                        <span>01.08.2021</span>
+                        <span>6 articles</span>                    
+                    </p>
+                    <p>$120.00</p> 
+                    <img src="./Icons/flechita.svg" alt="flecha"> 
+                </div>
+                
+            </div> 
+            
+
+        </div>    
+
+    </div>
+</body>
+</html>

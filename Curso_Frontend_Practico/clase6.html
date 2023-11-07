@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Serif:opsz,wght@8..144,200&family=Tourney:wght@100&display=swap" rel="stylesheet">
+  
+    <style>
+        :root { /* es un selector css que te permite manejar el nodo principal de un documento :root” es igual a decir “html”, la ventaja es que :root tiene mayor prioridad(especificidad). Es muy utilizado para iniciar las variables css justamente por eso */
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital--green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body { /* dejamos el body a 0 pixeles de margen*/
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            
+        }
+
+        .cards-container{ /* dimenciones del contenedor */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 
+            240px);/* Esto quiere decir que va a repetir las colomnas en 240px cada una es como si fuera 1fr 1fr* si queremos 2 columnas del mismo tamaño es 1fr 1fr/*/
+            gap: 26px; /* da espacio entre las 2 grid osea a las 2 imagenes y no se vean pegadas*/
+            place-content: center;/* Este codigo alinea al centro el contenedor*/
+        }
+
+        .product-card { /* contenedor del producto */
+            width: 240px;
+        }
+
+        .product-card img{ /* la imagen del producto */
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover; /*Esta propiedad indica que va a tener la imagen independientemente del tamaño que le de en el width y heigth, osea estara su tamaño origina */
+        }
+
+        .product-info{
+            display: flex;
+            justify-content: space-between;/* Alinamos elementos para que quede uno al aldo del otro con espacio*/
+            align-items: center;
+            margin-top: 12px;
+        }
+
+        .product-info figure { /* Para que el logo quede alineado con la imagen*/
+            margin: 0;
+
+        }
+
+        .product-info figure img{ /* Este codigo, indica los estilos que estan dentro de la etiqueta figure osea en este caso la imagen*/
+            width: 35px;
+            height: 35px;
+            
+        }
+
+        .product-info div p:nth-child(1){ /* agremaos los estilos deñ div y parrafo que esta en los precios en este caso el valor*/
+            font-size: var(--md);
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 4px;
+
+        }
+
+        .product-info div p:nth-child(2){ /* agremaos los estilos deñ div y parrafo que esta en los precios en este caso el valor*/
+            font-size: var(--sm);
+            margin-top: 0;
+            margin-bottom: 0;
+            color: var(--very-light-pink);
+
+        }
+
+        @media (max-width: 640px){
+            .cards-container{ /* dimenciones del contenedor */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 
+            140px);/* Esto quiere decir que va a repetir las colomnas en 240px cada una es como si fuera 1fr 1fr* si queremos 2 columnas del mismo tamaño es 1fr 1fr/*/            
+        }
+        .product-card { /* contenedor del producto */
+            width: 140px;
+        }
+
+        .product-card img{ /* la imagen del producto */
+            width: 140px;
+            height: 140px;
+           
+        }
+
+        }
+
+    </style>
+</head>
+<body>
+    <section class="main-container">
+        <div class="cards-container">
+            
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+            
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+            
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+
+            <div class="product-card"><!--Incia el contenedor de cada producto-->
+                <img src="https://cdn.pixabay.com/photo/2014/09/24/14/29/macbook-459196_1280.jpg" alt=""><!--imagen principal del producto-->
+                <div class="product-info"><!--Incia el contenedor donde estara el parrafo-->
+                    <div>
+                        <p>$120,00</p>
+                        <p>Notebook</p>
+                    </div>
+
+                    <figure><!--una nueva etiqueta para agregar la imagen y auda a posicionar la imagen SEO -->
+                        <img src="./Icons/bt_add_to_cart.svg" alt="">
+                    </figure>                   
+                </div>                
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

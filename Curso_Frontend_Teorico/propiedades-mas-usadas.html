@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,200&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+
+        section{ /* aca agregamos las medidas de la seccion de la card*/
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }        
+
+        .cart{ /* Aca le damos estilos al modluo de la tarjeta*/
+            background: white;
+            width: 332px;
+            height: 529px;
+            border-radius: 26px;
+            overflow: hidden;          
+            
+        }
+
+        .cart img{ /* agregamos la imagen que se adapte al modulo d ela tarjeta*/
+            width: 100%;
+        }
+
+        .cart .perfil{ /* agregamos los estilos para la imagen del perfil*/
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            border: 4px solid #ececec;
+        }
+
+        .cart ul{
+            text-align-last: center;/*Alinea al centro del contenedor la imagen */
+            padding: initial;
+            margin-top: -57px;
+            position: relative;
+        }
+
+        p {
+            font-family: 'Roboto Serif', serif;
+        }
+
+        .cart p{
+            text-align: center;
+            margin: auto;
+        }
+
+        .cart p:nth-child(2){
+            color: rgb(0 0 0 / 46%);
+            font-weight: bold;
+        }
+
+        .cart h1{
+            text-align: center;
+            margin: auto;
+            font-family: 'Roboto Serif', serif;
+        }
+
+        .cart .descripcion{ /*  aca damos margen a la desciprcion para que haya espacio en los follower */
+            margin-bottom: 32px;
+        }
+
+        .modulos{ /* estilos de modulo de direccion e email*/
+            /*background: rgb(121, 97, 97);*/
+            display: flex;
+            justify-content: space-around;
+            padding: 22px;
+        }
+        
+        .numeros_follower{ /* numeros del follower*/
+            display: flex;
+            justify-content: space-around;
+            /*border: 1px solid #00000057;*/
+        }
+
+        .footer_card h3{/* modulo de follow footer*/
+            text-align: center;
+            margin: 0;
+            padding: 27px;
+            background-color: #39362f;
+            color: white;
+        }
+        
+        table, td, th {
+            border: 1px solid rgba(0, 0, 0, 0.182);
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="cart">
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSA3ujBsmjZomlgFYmpHpKdGJLThOzXmXym5ip4ap8Lbg67-sR2psy4nGpWZRet5BWmNBwPPaz4wYaKp_61K-8X1wDws4PW" alt="fondo">
+            <ul>
+                <li><img class="perfil" src="https://modogps.cl/wp-content/uploads/2023/04/bbda6bb6-9b59-4c84-839a-d6d16f72e273-e1682630944582.jpeg" alt="web"></li>
+            </ul>
+            <div class="descripcion">
+                <h1>Angel Quintero</h1>
+                <p>Frontend Developer</p> 
+            </div>            
+            <div class="modulos">
+                <div class="follower">
+                    <p><i class="fa fa-map-marker" aria-hidden="true"> Chile</i></p>    
+                </div>
+                <div class="follower_1">
+                    <p><i class="fa fa-envelope" aria-hidden="true"> Send E-mail</i></p>    
+                </div>
+            </div>
+            <div class="numeros_follower">
+                <table>
+                    <tr>
+                        <th><p>8,100 <br>Follower</p></th>
+                        <th><p>8,100 <br>Follower</p></th>
+                    </tr>
+                </table>
+                <!--div class="fl_1">8,100</div-->               
+            </div>
+            <div class="footer_card">
+                <h3>Follow</h3>
+            </div>
+        </div>        
+    </section>
+</body>
+</html>
+
+<!--<p>8,100</p>
+                    <p>Follower</p>-->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        div{
+            background: palegoldenrod;
+            position: absolute;
+        }
+
+        .one{
+            background: red;
+            z-index: 5;
+        }
+        .two{
+            background: rgba(19, 3, 3, 0.252);
+            z-index: 4;
+
+        }
+
+        .two .two-1{
+            background: blue;
+            z-index: 6;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">platzy</div>
+    <div class="two">Master
+        <div class="two-1">junior</div>
+    </div>
+</body>
+</html>

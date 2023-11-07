@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Serif:opsz,wght@8..144,200&family=Tourney:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        :root { /* es un selector css que te permite manejar el nodo principal de un documento :root” es igual a decir “html”, la ventaja es que :root tiene mayor prioridad(especificidad). Es muy utilizado para iniciar las variables css justamente por eso */
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital--green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body { /* dejamos el body a 0 pixeles de margen*/
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            
+        }
+
+        .my-order{ /* Creamos los estilos del contenedor principal */
+            width: 100%; /*100% la pantalla*/
+            height: 100vh;
+            display: grid; /* display para poder para crear una cuadricula de columnas*/
+            place-items: center;
+        }
+
+        .title{ /*le damos estilos al texto*/
+            font-size: var(--lg);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .my-order-container{ /*Este es el modulo donde se agrupara todo el contenedor */
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* grid-template-rows determina el numero y tamaño de las filas*/
+            width: 300px;
+        }
+
+        .flecha-rotacion{
+            display: flex;
+            align-content: space-between;
+            align-items: center;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .flecha-rotacion img{
+            display: flex;
+            transform: rotate(180deg);
+            cursor: pointer;
+        }
+
+        .card-precio{ 
+            display: grid;
+            grid-template-columns: auto 1fr auto auto;
+            align-items: center;
+            gap: 16px
+        }
+
+        .card-precio figure{ /*alinea el texto, imagen, y precio */
+            margin: 0;
+        }
+
+        .card-precio figure img{ 
+            height: 70px;
+            width: 70px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .card-precio p:nth-child(2){ 
+            color: var(--very-light-pink);
+            
+        }
+
+        .card-precio p:nth-child(3){ 
+            font-size: var(--md);
+            font-weight: bold;
+        }
+        
+        .card-precio img{
+            cursor: pointer;
+        }
+
+        .order{ /*le damos los estilos al div de total de ordenes y costo total de productos */
+            display: grid; /* rceamos un disply grid para darle estilo de cuadricula*/
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: center;
+            background-color: var(--text-input-field);
+            margin-bottom: 16px;
+            border-radius: 8px;
+            padding: 0 24px;
+        }
+
+                
+        .order p:nth-child(1){
+            display: flex;
+            flex-direction: column;
+        }
+
+        .order p:nth-child(2){
+            text-align: end;
+            font-weight: bold;
+        }
+
+        .order p span:nth-child(1){
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .order p span:nth-child(2){
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+
+        .my-order-content{/*Este es el modulo donde se agregaran el total y cuantos artculos seleciono */
+            display: flex;
+            flex-direction: column;
+            margin-top: 35px;
+        }
+
+        .primary-button{
+            background-color: var(--hospital--green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+
+        .segundary-btton{ /* Alineamos el boton al centro alineados con la imagen y el texto*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="my-order"><!--contenedor principal-->        
+        <div class="my-order-container"><!--contenedor donde esta agrupado el titulo y el total del precio-->
+            <div class="flecha-rotacion">
+                <img src="./Icons/flechita.svg" alt="flechita"></aside>         
+                <h1 class="title">My Orden</h1>
+            </div>
+            
+            
+            <div class="card-precio">
+                <figure>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/13/46/bicycle-161524_1280.png" alt="bicicleta">
+                </figure>
+                <p>bicicleta</p>
+                <p>$120,00</p>
+                <img src="./Icons/icon_close.png" alt="icon_close">
+            </div>
+
+            <div class="card-precio">
+                <figure>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/13/46/bicycle-161524_1280.png" alt="bicicleta">
+                </figure>
+                <p>bicicleta</p>
+                <p>$120,00</p>
+                <img src="./Icons/icon_close.png" alt="icon_close">
+            </div>
+
+            <div class="card-precio">
+                <figure>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/13/46/bicycle-161524_1280.png" alt="bicicleta">
+                </figure>
+                <p>bicicleta</p>
+                <p>$120,00</p>
+                <img src="./Icons/icon_close.png" alt="icon_close">
+            </div>
+
+            <div class="card-precio">
+                <figure>
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/13/46/bicycle-161524_1280.png" alt="bicicleta">
+                </figure>
+                <p>bicicleta</p>
+                <p>$120,00</p>
+                <img src="./Icons/icon_close.png" alt="icon_close">
+            </div>
+            
+
+            <div class="my-order-content"><!--Este es el modulo donde se agregaran el total y cuantos artculos seleciono-->
+                <div class="order">
+                    <p>
+                        <span>Total</span>
+                        <!--span>6 articles</span-->                    
+                    </p>
+                    <p>$560.00</p>  
+                </div>
+                
+            </div>
+
+            <button class="primary-button segundary-btton">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

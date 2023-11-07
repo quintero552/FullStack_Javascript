@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Serif:opsz,wght@8..144,200&family=Tourney:wght@100&display=swap" rel="stylesheet">
+  
+    <title>Clase 12</title>
+    <style>
+        :root { /* es un selector css que te permite manejar el nodo principal de un documento :root” es igual a decir “html”, la ventaja es que :root tiene mayor prioridad(especificidad). Es muy utilizado para iniciar las variables css justamente por eso */
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital--green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body { /* dejamos el body a 0 pixeles de margen*/
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            
+        }
+
+        .product-detail{ /* Estilos del contenedor principal quiere decir que de ese tamaño no cambiara*/
+            width: 360px;
+            padding-bottom: 24px;
+            /*height: 360px;*/
+            position: absolute;/* agremos la posicion absoluta para poder mover el contenedor y qede a mano derecha con el right: 0*/
+            right: 0;
+        }
+        
+        .imagen-x img{/* Estilos donde se posiciona la imagen X de cerrar*/
+            position: absolute;
+            z-index: 2;
+            padding: 10px;
+            border: 1px solid var(--hospital--green);
+            background: var(--white);
+            border-radius: 30px;
+            margin: 12px 12px 0 12px;
+            cursor: pointer;
+        }
+
+
+        .product-detail-imagen img{/*estilos de la imagen ampliada*/
+            width: 100%; /*se ajusta al 100% del contenedor product-detail */
+            height: 360px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border-radius: 0 0 29px 29px;
+        }
+
+
+        .primary-button{
+            background-color: var(--hospital--green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+        }
+
+        .segundary-btton{ /* Alineamos el boton al centro alineados con la imagen y el texto*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-detail-detalle {
+            margin: 14px 14px 0 14px;;
+        }
+
+        .product-detail-detalle p:nth-child(1) {
+            margin-bottom: 0;
+            font-weight: bold;
+        }
+
+        .product-detail-detalle p:nth-child(2) {
+            margin-top: 0;
+            color: var(--very-light-pink);
+        }
+
+        .product-detail-detalle p:nth-child(3) {
+            color: var(--very-light-pink);
+        }
+
+        @media (max-width: 640px) {
+            .product-detail{
+                height: 90%;
+                width: 100%;
+            }
+
+            .product-detail-detalle{
+                justify-content: space-between;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <aside class="product-detail"><!-- se agreag esta etiqueta, para poder indicar que va posicionarse verticalmente a la izquierda o derecha-->
+        <div class="imagen-x">
+            <img src="./Icons/icon_close.png" alt="icon_shopping_cart">
+        </div>
+
+        <div class="product-detail-imagen">
+            <img src="https://cdn.pixabay.com/photo/2013/07/13/13/46/bicycle-161524_1280.png" alt="detalle-imagen">
+        </div>
+
+        <div class="product-detail-detalle">
+            <p>$120.00</p>
+
+            <p>Bike</p>
+
+            <p>Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer. </p>
+
+            <button class="primary-button segundary-btton"><img src="./Icons/bt_add_to_cart.svg" alt="carrito">Add to card</button>
+        </div>
+    </aside>
+
+</body>
+</html>

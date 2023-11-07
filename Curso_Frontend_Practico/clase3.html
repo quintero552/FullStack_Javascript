@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Roboto+Serif:opsz,wght@8..144,200&family=Tourney:wght@100&display=swap" rel="stylesheet">
+  
+    <style>
+        :root { /* es un selector css que te permite manejar el nodo principal de un documento :root” es igual a decir “html”, la ventaja es que :root tiene mayor prioridad(especificidad). Es muy utilizado para iniciar las variables css justamente por eso */
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink: #c7c7c7;
+            --text-input-field: #f7f7f7;
+            --hospital--green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+
+        body { /* dejamos el body a 0 pixeles de margen*/
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            
+        }
+
+        .login{ /* agregamos el alto y el ancho a 100% y vh el alto, ademas gregamos display grid*/
+            width: 100%;
+            height: 100vh;
+            display: grid; /* proporciona una cuadrícula de una sola columna */
+            place-items: center; /* centraliza el contenedor*/
+
+        }
+
+        .form-login{ /* estilos del div donde estara el formulario*/
+            display: grid;
+            grid-template-rows: auto 1fr auto; /*  */
+            width: 300px;
+        }
+
+        .logo{/* estilos del logo*/
+            width: 150px; /*anchura de 150px */
+            margin-bottom: 48px; /* le agregamos un margen inferior para que se separe del div*/
+            justify-self: center; /* justificamos el contenedor al centro*/
+            display: none; /* para que no aparezac el logo dentro del desktop, sino solo en movil*/
+        }
+
+        
+        .form{
+            display: flex; /* subimos el texto */
+            flex-direction: column; /*agregamos la direccion del formulario que sea como tipo columna*/
+        }
+
+        .form a{
+            color: var(--hospital--green);
+            font-size: var(--sm);
+            margin-bottom: 52px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .label{/*estilos del donde se agrega los nombres del input*/
+            font-size: var(--sm);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .input{
+            background-color: var(--text-input-field); /* traemos el color desde la variable root */
+            border: none; /* indicamos para que no tenga borde el input */
+            border-radius: 8px; /* redondeamos los borde del input */
+            height: 30px; /* Creamos un alto de 30px del input*/
+            font-size: var(--md); /*que le titulo se a mediano*/
+            padding: 6px;
+            margin-bottom: 12px;
+        }
+
+        .input-email { /* para que de espacio en el margen del input donde esta el email y no se vea tan juntos*/
+            margin-bottom: 22px;
+        }
+
+        .primary-button{
+            background-color: var(--hospital--green);
+            border-radius: 8px;
+            border: none;
+            color: var(--white);
+            width: 100%;
+            cursor: pointer; /* para que al pasar el cursor por el boton, me salga una manito*/
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+
+        }
+
+        .login-button{
+            margin-top: 14px;
+            margin-bottom: 30px;
+        }
+
+        .resend{ /*clase que esta dentro del p */
+            font-size: var(--sm);
+        }
+
+        .resend span{ /* clase de la etiqueta span*/
+            color: var(--very-light-pink);
+        }
+
+        .resend a{ /*estilos del link  */
+            color: var(--hospital--green);
+            text-decoration: none; /*quitamos la raya que sostiene un link */
+        }
+
+        .secodary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid;
+            color: var(--hospital--green);
+            width: 100%;
+            cursor: pointer; /* para que al pasar el cursor por el boton, me salga una manito*/
+            font-size: var(--md);
+            font-weight: bold;
+            height: 50px;
+
+        }
+        
+        
+
+        @media (max-width: 640px) { /* @media, que sea un tamaño de max-width: 640 que quiere decir que menos de esta medida  */
+            .logo{
+                display: block;
+            }
+
+            .form{
+                margin-bottom: 150px; 
+            }
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="login"> <!--Creamos un div que donde abarcara todo el contenedor principal -->
+        <div class="form-login"> <!--Creamos otro div que donde estara todo el loginl -->
+            <img src="./Logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+            <form action="formulario" class="form">
+                <label for="email"  class="label">Email address</label>
+                <input type="text" id="email" placeholder="platzy@example.com" class=" input input-email">
+
+                <label for="password"  class="label">Password</label>
+                <input type="password" id="password" placeholder="*******" class="input input-password">
+
+                <input type="submit" value="Log in" class="primary-button login-button">
+
+                <a href="/">Forgot my password</a>
+            </form>
+
+            <button class="secodary-button signup-button">Sign up</button>
+        </div><!--fin del contenedor login-->
+    </div><!--fin del contenedor-->
+</body>
+</html>
