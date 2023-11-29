@@ -66,6 +66,35 @@ var nombres = clientes.find(function(nombres){
 console.log(nombres);
 
 
+// segunda opcion de FINDE();
+
+var clientes = [
+
+    {nombre: "Angel", edad: 33, correo:"quintero552@hotmail.com"},
+    {nombre: "Juan", edad: 40, correo:"juan1987@gmail.com"},
+    {nombre: "Luisa", edad: 26, correo:"luisacarlos@yahoo.es"},
+    {nombre: "Francisco", edad: 48, correo:"francisco@gmail.com"},
+    {nombre: "Jean", edad: 38, correo:"jean@hotmail.com"},
+    {nombre: "marco", edad: 15, correo:"jean@hotmail.com"},
+    {nombre: "jose", edad: 10, correo:"jean@hotmail.com"},
+    {nombre: "maria", edad: 18, correo:"jean@hotmail.com"}
+];
+
+
+var nombrefind = clientes.find(function(nombre) {
+    return nombre.edad < 18;
+})
+
+//out
+// nombrefind
+// el resltado es: {nombre: 'marco', edad: 15, correo: 'jean@hotmail.com'}
+
+
+
+
+
+
+
 //////////////////////////////////////////////////////////////////////// forEach();*////
 
 // forEach, este metodo no me genera un nuevo array como los otros, sino que me hace un recorrido y me busca lo que especifico.
